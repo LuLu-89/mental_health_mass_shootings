@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+		<table width=5000>
+		<thead>
+		<tr>
+			<th>CaseID
+			<th>Title
+			<th>Location
+			<th>City
+			<th>State</th>
+			<th>Latitude</th>
+			<th>Longitude</th>
+			<th>Number of Civilian Fatalities</th>
+			<th>Number of Civilian Injured</th>
+			<th>Number of Enforcement Fatalities</th>
+			<th>Number of Enforcement Injured</th>
+			<th>Total Number of Fatalities</th>
+			<th>Total Number of Victims</th>
+			<th>Description</th>
+			<th>Date</th>
+			<th>Day of Week</th>
+			<th>Date - Detailed</th>
+			<th>Shooter Name</th>
+			<th>Number of shooters</th>
+			<th>Shooter Age(s)</th>
+			<th>Average Shooter Age</th>
+			<th>Shooter Sex</th>
+			<th>Shooter Race</th>
+			<th>Type of Gun - Detailed</th>
+			<th>Type of Gun - General</th>
+			<th>Number of Shotguns</th>
+			<th>Number of Rifles</th>
+			<th>Number of Handguns</th>
+			<th>Total Number of Guns</th>
+			<th>Number of Automatic Guns</th>
+			<th>Number of Semi-Automatic Guns</th>
+			<th>Fate of Shooter at the scene</th>
+			<th>Fate of Shooter</th>
+			<th>Shooter's Cause of Death</th>
+			<th>School Related</th>
+			<th>Place Type</th>
+			<th>Relationship to Incident Location</th>
+			<th>Targeted Victim/s - Detailed</th>
+			<th>Targeted Victim/s - General</th>
+			<th>Possible Motive - Detailed</th>
+			<th>Possible Motive - General</th>
+			<th>History of Mental Illness - Detailed</th>
+			<th>History of Mental Illness - General</th>
+			<th>Data Source 1</th>
+			<th>Data Source 2</th>
+			<th>Data Source 3</th>
+			<th>Data Source 4</th>
+			<th>Data Source 5</th>
+			<th>Data Source 6</th>
+			<th>Data Source 7</th>
+			<th>Military Experience</th>
+			<th>Class</th>
+			<th>Depreciation</th>
+			<th>Notes</th>
+			<th>Edit Date</th>
+		</tr>
+		</thead>
+		<tbody>
+		{% for item in items %}
+			<tr>
+				<td>{{item['CaseID']}}</td>
+				<td>{{item['Title']}}</td>
+				<td>{{item['Location']}}</td>
+				<td>{{item['City']}}</td>
+				<td>{{item['State']}}</td>
+				<td>{{item['Latitude']}}</td>
+				<td>{{item['Longitude']}}</td>
+				<td>{{item['Number of Civilian Fatalities']}}</td>
+				<td>{{item['Number of Civilian Injured']}}</td>
+				<td>{{item['Number of Enforcement Fatalities']}}</td>
+				<td>{{item['Number of Enforcement Injured']}}</td>
+				<td>{{item['Total Number of Fatalities']}}</td>
+				<td>{{item['Total Number of Victims']}}</td>
+				<td>{{item['Description']}}</td>
+				<td>{{item['Date']}}</td>
+				<td>{{item['Day of Week']}}</td>
+				<td>{{item['Date - Detailed']}}</td>
+				<td>{{item['Shooter Name']}}</td>
+				<td>{{item['Number of shooters']}}</td>
+				<td>{{item['Shooter Age(s)']}}</td>
+				<td>{{item['Average Shooter Age']}}</td>
+				<td>{{item['Shooter Sex']}}</td>
+				<td>{{item['Shooter Race']}}</td>
+				<td>{{item['Type of Gun - Detailed']}}</td>
+				<td>{{item['Type of Gun - General']}}</td>
+				<td>{{item['Number of Shotguns']}}</td>
+				<td>{{item['Number of Rifles']}}</td>
+				<td>{{item['Number of Handguns']}}</td>
+				<td>{{item['Total Number of Guns']}}</td>
+				<td>{{item['Number of Automatic Guns']}}</td>
+				<td>{{item['Number of Semi-Automatic Guns']}}</td>
+				<td>{{item['Fate of Shooter at the scene']}}</td>
+				<td>{{item['Fate of Shooter']}}</td>
+				<td>{{item['Shooter\'s Cause of Death']}}</td>
+				<td>{{item['School Related']}}</td>
+				<td>{{item['Place Type']}}</td>
+				<td>{{item['Relationship to Incident Location']}}</td>
+				<td>{{item['Targeted Victim/s - Detailed']}}</td>
+				<td>{{item['Targeted Victim/s - General']}}</td>
+				<td>{{item['Possible Motive - Detailed']}}</td>
+				<td>{{item['Possible Motive - General']}}</td>
+				<td>{{item['History of Mental Illness - Detailed']}}</td>
+				<td>{{item['History of Mental Illness - General']}}</td>
+				<td>{{item['Data Source 1']}}</td>
+				<td>{{item['Data Source 2']}}</td>
+				<td>{{item['Data Source 3']}}</td>
+				<td>{{item['Data Source 4']}}</td>
+				<td>{{item['Data Source 5']}}</td>
+				<td>{{item['Data Source 6']}}</td>
+				<td>{{item['Data Source 7']}}</td>
+				<td>{{item['Military Experience']}}</td>
+				<td>{{item['Class']}}</td>
+				<td>{{item['Depreciation']}}</td>
+				<td>{{item['Notes']}}</td>
+				<td>{{item['Edit Date']}}</td>	
+			</tr>				
+		{% endfor %}
+		</tbody>
+		</table>
+	</div>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+
+</html>
