@@ -4,3 +4,9 @@ th,td{
 table, th, td {
   border: 1px solid black;
 }
+
+#map,
+body,
+html {
+  height: 100%;
+}

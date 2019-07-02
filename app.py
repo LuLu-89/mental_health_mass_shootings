@@ -5,7 +5,6 @@ from sqlalchemy.orm import Session
 from sqlalchemy import create_engine
 
 import pandas as pd
-import config
 
 #################################################
 # Flask Setup
@@ -38,7 +37,7 @@ def index():
     return render_template("index.html", items=rows)
 
 @app.route('/map')
-def index():
+def map():
     return render_template("map.html")
 
 
