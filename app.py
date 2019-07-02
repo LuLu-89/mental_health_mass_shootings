@@ -37,6 +37,10 @@ def index():
 
     return render_template("index.html", items=rows)
 
+@app.route('/map')
+def index():
+    return render_template("map.html")
+
 
 if __name__ == '__main__':
     app.run(debug=True)
