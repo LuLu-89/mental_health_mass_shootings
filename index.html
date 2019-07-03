@@ -1,54 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Mass Shootings and Mental Health</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Leaflet CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.css">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
 
-  <!-- Our CSS -->
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
 </head>
 
 <body>
+  <!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
 
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <!-- The div that holds our map -->
-        <div id="map"></div>
-      </div>
-    </div>
+  <!-- Add your site or application content here -->
+  <div style="width: 90%"></div>
+  <canvas id="myChart" height="400" width="400"></canvas>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>  <script src="js/vendor/modernizr-3.7.1.min.js"></script>
+  <!-- <script src="js/plugins.js"></script> -->
+  <script src="js/main.js"></script>
 
-    <!-- div that holds the pie and word cloud -->
-    <div class="row">
-      <div class="col-md-6">
-        <div id="pie"></div>
-      </div>
-      <div class="col-md-6">
-        <div id="wordcloud"></div>
-      </div>
-    </div>
-
-    <!-- Kool chart JS library -->
-    <script src="https://www.koolchart.com/demo/LicenseKey/KoolChartLicense.js"></script>
-    <script src="https://www.koolchart.com/demo/KoolChart/JS/KoolChart.js"></script>
-    <link rel="stylesheet" href="https://www.koolchart.com/demo/KoolChart/Assets/Css/KoolChart.css" />
-
-    <!-- D3 -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js"></script>
-
-    <!-- Leaflet JavaScript -->
-    <script src="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.js"></script>
-
-    <!-- API Key -->
-    <script type="text/javascript" src="js/config.js"></script>
-    <!-- Our JavaScript -->
-    <script type="text/javascript" src="js/app.js"></script>
-  </div>
 </body>
 
 </html>
+
+
