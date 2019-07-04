@@ -13,8 +13,8 @@ d3.json(queryUrl, function(data) {
       // here we choose property "place" which is written "feature.properties.place"
       // and then wrapped in layer.bindPopup to make it the popup
       // here we also use a javaScript "new Date" panel to display date info
-      layer.bindPopup(`<h3>${feature.properties.location}</h3>
-      <p>${feature.properties.date}</p>`);
+      layer.bindPopup(`<h3>${feature.properties.Location}</h3>
+      <p>${feature.properties.Date}</p>`);
     }
   });
 

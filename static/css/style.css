@@ -10,3 +10,30 @@ body,
 html {
   height: 100%;
 }
+
+#map,
+#content {
+	min-height:500px;
+}
+
+#content > div{
+	display:none;
+}
+
+#content > div:first-child{
+	display:block;
+}
+
+.tab{
+	display:inline-block;
+	padding:0 20px;
+	border:1px solid #ddd;
+	margin:20px 20px 20px 0;
+	line-height:2em;
+	cursor:pointer;
+}
+
+.tab.active{
+	background:#777;
+	color:#fff;
+}

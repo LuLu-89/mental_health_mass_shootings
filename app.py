@@ -27,6 +27,10 @@ session = Session(engine)
 
 @app.route('/')
 def index():
+    return render_template("dashboard.html")
+
+@app.route('/data')
+def data():
     #for row in session.query(Msa).all():
     rows = engine.execute("SELECT * FROM msa").fetchall()
     # for row in engine.table_names():
