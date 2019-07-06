@@ -10,3 +10,10 @@ body,
 html {
   height: 100%;
 }
+
+h2.mental {
+  color: rgb(66, 185, 245);
+}
+h2.school {
+  color: rgb(56, 207, 106);
+}
