@@ -20,13 +20,13 @@ var massShooting = d3.csv("/js/Stanford_MSA_Database.csv", function (err, data) 
   var layoutStr =
     '<KoolChart backgroundColor="#FFFFFF" borderStyle="none" >'
     + '<Options>'
-    + '<Caption text="General Possible Motive"/>'
+    + '<Caption text="History of Mental Health"/>'
     + '<Legend useVisibleCheck="true"/>'
     + '</Options>'
-    + '<CurrencyFormatter id="numFmt" currencySymbol="%" alignSymbol="right"/>'
+    + '<CurrencyFormatter id="numFmt" currencySymbol="" alignSymbol="right"/>'
     + '<Pie2DChart showDataTips="true" itemClickJsFunction="chartClickHanlder" showRotateEffect="true">'
     + '<series>'
-    + '<Pie2DSeries nameField="motive" field="share" labelPosition="inside" color="#ffffff" formatter="{numFmt}">'
+    + '<Pie2DSeries nameField="mental health" field="share" labelPosition="inside" color="#ffffff" formatter="{numFmt}">'
     + '<showDataEffect>'
     + '<SeriesSlide duration="1000"/>'
     + '</showDataEffect>'
@@ -37,13 +37,13 @@ var massShooting = d3.csv("/js/Stanford_MSA_Database.csv", function (err, data) 
 
   var layoutStr2 = '<KoolChart backgroundColor="#FFFFFF" borderStyle="none" >'
     + '<Options>'
-    + '<Caption text="General Targeted Victim(s)"/>'
+    + '<Caption text="General Possible Motive"/>'
     + '<Legend useVisibleCheck="true"/>'
     + '</Options>'
-    + '<CurrencyFormatter id="numFmt" currencySymbol="%" alignSymbol="right"/>'
+    + '<CurrencyFormatter id="numFmt" currencySymbol="" alignSymbol="right"/>'
     + '<Pie2DChart showDataTips="true">'
     + '<series>'
-    + '<Pie2DSeries nameField="victim" field="share" labelPosition="inside" color="#ffffff" formatter="{numFmt}">'
+    + '<Pie2DSeries nameField="motive" field="share" labelPosition="inside" color="#ffffff" formatter="{numFmt}">'
     + '<showDataEffect>'
     + '<SeriesSlide duration="1000"/>'
     + '</showDataEffect>'
@@ -52,28 +52,30 @@ var massShooting = d3.csv("/js/Stanford_MSA_Database.csv", function (err, data) 
     + '</Pie2DChart>'
     + '</KoolChart>';
 
-  // Use an array variable for Dataset.
-  var motivesListPie = [];
+  // Use an associative array for Dataset.
+  var mentalHealthPie = [];
   console.log(data);
   console.log(data.length);
 
+
   for (var i = 0; i < data.length; i++) {
-    motivesListPie.push(data[i]['Possible Motive - General']);
+    mentalHealthPie.push(data[i]['History of Mental Illness - General']);
   }
 
-  var motiveHash = []
+  var mentalHash = []
   for (var j = 0; j < data.length; j++) {
-    if (motiveHash[data[j]['Possible Motive - General']] >= 1) {
-      motiveHash[data[j]['Possible Motive - General']] += 1
+    if (mentalHash[data[j]['History of Mental Illness - General']] >= 1) {
+      mentalHash[data[j]['History of Mental Illness - General']] += 1
     } else {
-      motiveHash[data[j]['Possible Motive - General']] = 1
+      mentalHash[data[j]['History of Mental Illness - General']] = 1
     }
   }
-  console.log(motiveHash);
+  console.log(mentalHash);
 
   pieData = []
-  for (var i in motiveHash) {
-    pieData.push({ "motive": i, "share": motiveHash[i] })
+
+  for (var i in mentalHash) {
+    pieData.push({ "mental health": i, "share": mentalHash[i] })
   }
   console.log(pieData);
 
@@ -87,41 +89,56 @@ var massShooting = d3.csv("/js/Stanford_MSA_Database.csv", function (err, data) 
     "setData": pieData
   });
 
-  // -------------------------------- from table data --------------------------------------
-  function chartClickHanlder(seriesId, index, data, values) {
-    window.setTimeout(function () {
-      KoolChart.call("pie2", "setLayout", layoutStr2);
-      KoolChart.call("pie2", "setData", victims);
-    }, 1000);
-  }
+  // Use an associative array for pie2.
 
-  // Use an array variable for pie2.
-
-  var victimsListPie = [];
+  var motivesListPie = [];
   // console.log(data);
   console.log(data.length);
 
   for (var k = 0; k < data.length; k++) {
-    victimsListPie.push(data[k]['Targeted Victim/s - General']);
+    motivesListPie.push(data[k]['Possible Motive - General']);
   }
 
-  var victimsHash = []
+  var motiveHash = []
   for (var l = 0; l < data.length; l++) {
-    if (victimsHash[data[l]['Targeted Victim/s - General']] >= 1) {
-      victimsHash[data[l]['Targeted Victim/s - General']] += 1
+    if (motiveHash[data[l]['Possible Motive - General']] >= 1) {
+      motiveHash[data[l]['Possible Motive - General']] += 1
     } else {
-      victimsHash[data[l]['Targeted Victim/s - General']] = 1
+      motiveHash[data[l]['Possible Motive - General']] = 1
     }
   }
-  console.log(victimsHash);
+  console.log(motiveHash);
 
-  pieData2 = []
-  for (var i in victimsHash) {
-    pieData2.push({ "victim": i, "share": victimsHash[i] })
+  function getdata2() {
+    pieData2 = []
+    for (var i in motiveHash) {
+      pieData2.push({ "motive": i, "share": motiveHash[i] })
+    }
+
+    return pieData2;
   }
+  pieData2 = getdata2()
   console.log(pieData2);
 
+  window.chartClickHanlder = function (seriesId, index, data, values) {
 
+    console.log(pieData2);
+
+    //window.setTimeout(function () {
+    console.log("LOGSOMETHING");
+
+    KoolChart.call("pie2", "setLayout", layoutStr2);
+    KoolChart.call("pie2", "setData", getdata2());
+    // }, 1000);
+  }
+
+  // function getRandomData() {
+  //   var arr = [{ "browser": "2016" }, { "browser": "2017" }, { "browser": "2018" }, { "browser": "2019" }];
+  //   return arr.map(function (item) {
+  //     item.share = Math.round(Math.random() * 50);
+  //     return item;
+  //   });
+  // }
 
   // ----------------------- The end of the configuration for creating dual pie chart. -----------------------
 

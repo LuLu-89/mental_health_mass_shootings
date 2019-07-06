@@ -40,13 +40,13 @@
 </head>
 
 <body>
-<nav class="nav">
-  <a class="nav-link index" href="#">Home</a>
-  <a class="nav-link map" href="#">Map</a>
-  <a class="nav-link pie" href="#">Pie</a>
-  <a class="nav-link wordcloud" href="#">Wordcloud</a>
-  <a class="nav-link data" href="https://github.com/StanfordGeospatialCenter/MSA">data</a>
-</nav>
+  <nav class="nav">
+    <a class="nav-link index" href="#">Home</a>
+    <a class="nav-link map" href="#">Map</a>
+    <a class="nav-link pie" href="#">Pie</a>
+    <a class="nav-link wordcloud" href="#">Wordcloud</a>
+    <a class="nav-link data" href="https://github.com/StanfordGeospatialCenter/MSA">data</a>
+  </nav>
   <div class="container">
     <div class="row">
       <div class="col-md-12">
@@ -59,8 +59,14 @@
     <div class="row">
       <div class="col-md-6">
         <!-- piecharts -->
-        <div id="chartHolder" style="height:600px; width:100%;"></div>
-        <div id="chartHolder2" style="height:600px; width:100%;"></div>
+        <div id="chartClickHanlder">
+          <div id="chartHolder" style="height:600px; width:100%;"></div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div id="chartClickHanlder">
+          <div id="chartHolder2" style="height:600px; width:100%;"></div>
+        </div>
       </div>
     </div>
     <!-- wordcloud -->
