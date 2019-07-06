@@ -59,15 +59,24 @@
 			<div id="content">
 				<div id="map"></div>
 				<div id="pie">
-					<div class="piechart" id="chartHolder"></div>
-					<div class="piechart" id="chartHolder2"></div>
+					<div class="row">
+						<div class="col-md-6">
+						<!-- piecharts -->
+							<div id="chartClickHanlder">
+								<div id="chartHolder" style="height:600px; width:100%;"></div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div id="chartClickHanlder">
+								<div id="chartHolder2" style="height:600px; width:100%;"></div>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div id="wordcloud"></div>
 			</div>
 		</div>
-    </div>
-	
-	
+    </div>	
 
     <!-- Kool chart JS library -->
     <script src="https://www.koolchart.com/demo/LicenseKey/KoolChartLicense.js"></script>
