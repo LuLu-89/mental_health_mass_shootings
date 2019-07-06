@@ -1,9 +1,9 @@
 /**
- rgba(117, 142, 95, 1); 	// CAMOUFLAGE GREEN
- rgba(163, 44, 63, 1);  	// BIG DIP O’RUBY
- rgba(28, 49, 68, 1);   	// YANKEES BLUE
- rgba(195, 216, 152, 1);	// MEDIUM SPRING BUD
- rgba(112, 22, 30, 1);		// PRUNE
+ #758E5F	rgba(117, 142, 95, 1);  	// CAMOUFLAGE GREEN
+ #A32C3F 	rgba(163, 44, 63, 1);  		// BIG DIP O’RUBY
+ #1c3144	rgba(28, 49, 68, 1);		// YANKEES BLUE
+ #c3d898	rgba(195, 216, 152, 1);		// MEDIUM SPRING BUD
+ #70161e	rgba(112, 22, 30, 1);		// PRUNE
  */
 th,td{
 	padding:5px;
@@ -32,17 +32,50 @@ html {
 	color:#fff;
 }
 
+/* #content{ */
+	/* background:rgba(163, 44, 63, 1);  */
+/* } */
+
 #map,
 #content {
 	min-height:900px;
 }
 
-#content > div{
-	display:none;
+#content{
+	position:relative;
+	background:rgba(163, 44, 63, 1);
+	border-radius:5px;
+	padding:1em 0;
 }
 
-#content > div:first-child{
-	display:block;
+#blurb,
+#headline{
+	text-align:center;
+	color:#fff;
+}
+
+#content > div{
+	visibility:hidden;
+	position:absolute;
+	z-index:-1;
+	top:4.8em;
+	left:0;
+	width:100%;
+	bottom:3em;
+}
+
+#blurb{
+	position:absolute;
+	bottom:0;
+	left:0;
+	right:0;
+	padding:10px;
+	z-index:2;
+}
+
+#content > div.active{
+	visibility:visible;
+	z-index:1;
 }
 
 .tab{

@@ -28,10 +28,6 @@
 	<script src="https://code.highcharts.com/highcharts.js"></script>
 	<script src="https://code.highcharts.com/modules/wordcloud.js"></script>
 
-	<!-- AnyChart library: -->
-	<!-- <script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>
-	<script src="https://cdn.anychart.com/releases/v8/js/anychart-tag-cloud.min.js"></script> -->
-
 	<!-- Leaflet CSS -->
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.css">
 
@@ -48,15 +44,16 @@
 		<h1 class="display-4">Mass Shootings and Mental Health in the U.S.</h1>
 		<p class="lead">A study of mental health motives in 50 years of mass shootings in the United States: 1966-2016</p>
 	</div>
-	<div class="container-fluid">
+	<div class="container-fluid main">
 		<div id="dashboard">
 			<div id="tabs">
-				<div class="tab" id="map_tab">Thing 1</div>
-				<div class="tab" id="pie_tab">Thing 2</div>
-				<div class="tab" id="wordcloud_tab">Thing 3</div>
+				<div class="tab" id="map_tab">Map</div>
+				<div class="tab" id="pie_tab">Motives</div>
+				<div class="tab" id="wordcloud_tab">Verbiage</div>
 			</div>
 			
 			<div id="content">
+				<h3 id="headline"></h3>
 				<div id="map"></div>
 				<div id="pie">
 					<div class="row">
@@ -74,6 +71,7 @@
 					</div>
 				</div>
 				<div id="wordcloud"></div>
+				<p id="blurb"></p>
 			</div>
 		</div>
     </div>	
@@ -97,9 +95,9 @@
     <!-- API Key -->
     <script type="text/javascript" src="static/js/config.js"></script>
     <!-- Our JavaScript -->
-    <script type="text/javascript" src="static/js/app.js"></script>
-	
     <script type="text/javascript" src="static/js/logic.js"></script>
+	
+    <script type="text/javascript" src="static/js/app.js"></script>
 	
     <script type="text/javascript" src="static/js/dashboard.js"></script>
 	
