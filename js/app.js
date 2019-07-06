@@ -132,16 +132,7 @@ var massShooting = d3.csv("/js/Stanford_MSA_Database.csv", function (err, data) 
     // }, 1000);
   }
 
-  // function getRandomData() {
-  //   var arr = [{ "browser": "2016" }, { "browser": "2017" }, { "browser": "2018" }, { "browser": "2019" }];
-  //   return arr.map(function (item) {
-  //     item.share = Math.round(Math.random() * 50);
-  //     return item;
-  //   });
-  // }
-
   // ----------------------- The end of the configuration for creating dual pie chart. -----------------------
-
 
 
   // -------------------------- Wordcloud via High Charts: -----------------------------------
