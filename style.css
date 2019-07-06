@@ -5,6 +5,7 @@ body {
 }
 
 /* set map, body, and html to 100% of the screen size */
+#pie,
 #map,
 body,
 html {
@@ -16,4 +17,8 @@ h2.mental {
 }
 h2.school {
   color: rgb(56, 207, 106);
+}
+
+.piechart{
+	
 }

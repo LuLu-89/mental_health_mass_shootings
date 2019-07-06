@@ -1,3 +1,11 @@
+
+/**
+ rgba(117, 142, 95, 1); 	// CAMOUFLAGE GREEN
+ rgba(163, 44, 63, 1);  	// BIG DIP O’RUBY
+ rgba(28, 49, 68, 1);   	// YANKEES BLUE
+ rgba(195, 216, 152, 1);	// MEDIUM SPRING BUD
+ rgba(112, 22, 30, 1);		// PRUNE
+ */
 th,td{
 	padding:5px;
 }
@@ -5,6 +13,12 @@ table, th, td {
   border: 1px solid black;
 }
 
+body{
+	color:rgba(28, 49, 68, 1);
+	font-family: 'PT Sans', sans-serif;
+}
+
+#pie,
 #map,
 body,
 html {
@@ -27,13 +41,17 @@ html {
 .tab{
 	display:inline-block;
 	padding:0 20px;
-	border:1px solid #ddd;
+	border:1px solid rgba(195, 216, 152, 1);
 	margin:20px 20px 20px 0;
 	line-height:2em;
 	cursor:pointer;
 }
 
 .tab.active{
-	background:#777;
-	color:#fff;
+	background:rgba(195, 216, 152, 1);
+	
+}
+
+.piechart{
+	min-height:200px;
 }
