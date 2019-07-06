@@ -9,13 +9,13 @@ We wanted to look at the relationship between mass shootings and mental health t
 ## Method
 * Python Flask Server
 * SQLite database
- - [SQLite](https://www.sqlite.org/index.html)
+  - [SQLite](https://www.sqlite.org/index.html)
 * Leaflet for map
- - [Leaflet](https://leafletjs.com)
+  - [Leaflet](https://leafletjs.com)
 * KoolChart for interactive pie chart
- - [KoolChart](https://www.koolchart.com)
+  - [KoolChart](https://www.koolchart.com)
 * High Charts for word cloud
- - [High Charts](https://www.highcharts.com)
+  - [High Charts](https://www.highcharts.com)
 
 ## Visualizations
 We created three ways to visualize the dataset: a map, pie chart, and word cloud
