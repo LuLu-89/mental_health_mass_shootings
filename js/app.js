@@ -26,7 +26,7 @@ var massShooting = d3.csv("/js/Stanford_MSA_Database.csv", function (err, data) 
     + '<CurrencyFormatter id="numFmt" currencySymbol="%" alignSymbol="right"/>'
     + '<Pie2DChart showDataTips="true" itemClickJsFunction="chartClickHanlder" showRotateEffect="true">'
     + '<series>'
-    + '<Pie2DSeries nameField="Motive" field="share" labelPosition="inside" color="#ffffff" formatter="{numFmt}">'
+    + '<Pie2DSeries nameField="motive" field="share" labelPosition="inside" color="#ffffff" formatter="{numFmt}">'
     + '<showDataEffect>'
     + '<SeriesSlide duration="1000"/>'
     + '</showDataEffect>'
@@ -43,7 +43,7 @@ var massShooting = d3.csv("/js/Stanford_MSA_Database.csv", function (err, data) 
     + '<CurrencyFormatter id="numFmt" currencySymbol="%" alignSymbol="right"/>'
     + '<Pie2DChart showDataTips="true">'
     + '<series>'
-    + '<Pie2DSeries nameField="Victims" field="share" labelPosition="inside" color="#ffffff" formatter="{numFmt}">'
+    + '<Pie2DSeries nameField="victim" field="share" labelPosition="inside" color="#ffffff" formatter="{numFmt}">'
     + '<showDataEffect>'
     + '<SeriesSlide duration="1000"/>'
     + '</showDataEffect>'
@@ -87,6 +87,7 @@ var massShooting = d3.csv("/js/Stanford_MSA_Database.csv", function (err, data) 
     "setData": pieData
   });
 
+  // -------------------------------- from table data --------------------------------------
   function chartClickHanlder(seriesId, index, data, values) {
     window.setTimeout(function () {
       KoolChart.call("pie2", "setLayout", layoutStr2);
@@ -116,9 +117,10 @@ var massShooting = d3.csv("/js/Stanford_MSA_Database.csv", function (err, data) 
 
   pieData2 = []
   for (var i in victimsHash) {
-    pieData2.push({ "Victim": i, "share": victimsHash[i] })
+    pieData2.push({ "victim": i, "share": victimsHash[i] })
   }
   console.log(pieData2);
+
 
 
   // ----------------------- The end of the configuration for creating dual pie chart. -----------------------
@@ -165,7 +167,7 @@ var massShooting = d3.csv("/js/Stanford_MSA_Database.csv", function (err, data) 
       name: 'Occurrences'
     }],
     title: {
-      text: 'Wordcloud of Lorem Ipsum'
+      text: 'Wordcloud of General Motives'
     }
   });
 
