@@ -29,5 +29,5 @@ We created an interactive pie chart created by [KoolChart](https://www.koolchart
 ### Word Cloud
 We created a word cloud by [High Charts](https://www.highcharts.com) to see the most common motive for the shooter. The most common one that came up was "unknown" but we decided to exclude it because it drew the attention away from all the other motives that we thought were more significant such as "Mental illness", "Multiple motives", and the variety of disputes. 
 
-### Server/Database
+## Server/Database
 We created a flask server, which parses our data from its  source into a sqlite database. The flask server then serves the data from 'api/data'
