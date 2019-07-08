@@ -48,13 +48,16 @@ html {
 #content{
 	position:relative;
 	overflow:hidden;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
 	/* background:rgba(163, 44, 63, 1); 
 	border-radius:5px;
 	padding:1em 0; */
 }
 
 #tabs{
-	position:absolute;
+	/* position:absolute; */
 	top:0;
 	left:0;
 	right:0;
@@ -100,7 +103,7 @@ a h3{
 	visibility:hidden;
 	position:absolute;
 	z-index:-1;
-	top:5.2em;
+	top:0;
 	left:0;
 	right:0;
 	bottom:3em;

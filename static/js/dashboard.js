@@ -4,7 +4,7 @@ function View(headline, blurb) {
 }
 
 reHeight = function (){
-	var window_height = Math.floor($(window).height());
+	var window_height = Math.floor($(window).height()) - 64;
 	var header_height = Math.ceil($(".header").height()) + parseInt($(".header").css("padding-top")) + parseInt($(".header").css("padding-bottom"));
 	var tab_height = $("#tabs").height();
 	tab_height = 0;
