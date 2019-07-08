@@ -63,6 +63,12 @@ html {
 	z-index:3000;
 }
 
+a h3:hover,
+a h3{
+	color:rgba(28, 49, 68, 1);
+	text-decoration:none;
+}
+
 .tab{
 	display:inline-block;
 	padding:0 20px;

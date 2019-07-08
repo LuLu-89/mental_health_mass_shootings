@@ -22,7 +22,7 @@ $(document).ready(function(){
 	views['wordcloud'] = new View("Shooter's General Motives","A wordcloud displaying all the general motives reported for the shooter while omitting “unknown” due to the excessive number of times it appears, drawing your attention away from the other motives.");
 	
 	
-	$(".tab").click(function(){
+	$(".tab:not(.external)").click(function(){
 		display_tab = $(this).attr("id").split("_")[0];
 		myView = views[display_tab];
 		$(`#${display_tab}`)
