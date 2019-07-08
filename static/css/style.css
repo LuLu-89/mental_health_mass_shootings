@@ -22,6 +22,7 @@ body{
 body,
 html {
   height: 100%;
+  overflow-x:hidden;
 }
 
 .header h1{
@@ -31,21 +32,56 @@ html {
 	background:rgba(28, 49, 68, 1);
 	color:#fff;
 }
-
-/* #content{ */
-	/* background:rgba(163, 44, 63, 1);  */
-/* } */
+.main{
+	/* padding:0; */
+}
+#dashboard{
+	position:relative;
+	
+}
 
 #map,
 #content {
-	min-height:900px;
+	/* min-height:900px; */
 }
 
 #content{
 	position:relative;
-	background:rgba(163, 44, 63, 1);
+	overflow:hidden;
+	/* background:rgba(163, 44, 63, 1); 
 	border-radius:5px;
-	padding:1em 0;
+	padding:1em 0; */
+}
+
+#tabs{
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	/* width:100%; */
+	background:#c3d898;
+	z-index:3000;
+}
+
+.tab{
+	display:inline-block;
+	padding:0 20px;
+	border:1px solid #758E5F;
+	border-width:0 1px 0 0;
+	margin:20px 20px 20px 0;
+	margin: 0;
+	line-height:2em;
+	cursor:pointer;
+	float:left;
+}
+
+.tab h3{
+	line-height:2em;
+}
+
+.tab.active{
+	background:rgba(117, 142, 95, 1);
+	color:#fff;
 }
 
 #blurb,
@@ -58,19 +94,21 @@ html {
 	visibility:hidden;
 	position:absolute;
 	z-index:-1;
-	top:4.8em;
+	top:5.2em;
 	left:0;
-	width:100%;
+	right:0;
 	bottom:3em;
 }
 
 #blurb{
-	position:absolute;
+	position:fixed;
 	bottom:0;
 	left:0;
 	right:0;
 	padding:10px;
+	margin:0;
 	z-index:2;
+	background:rgba(163, 44, 63, 0.7);
 }
 
 #content > div.active{
@@ -78,19 +116,7 @@ html {
 	z-index:1;
 }
 
-.tab{
-	display:inline-block;
-	padding:0 20px;
-	border:1px solid rgba(195, 216, 152, 1);
-	margin:20px 20px 20px 0;
-	line-height:2em;
-	cursor:pointer;
-}
 
-.tab.active{
-	background:rgba(117, 142, 95, 1);
-	color:#fff;
-}
 
 .piechart{
 	min-height:200px;
